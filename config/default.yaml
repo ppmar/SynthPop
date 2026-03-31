@@ -1,0 +1,58 @@
+population:
+  size: 200
+  country: "France"
+  language: "fr"
+  distributions:
+    age:
+      18-25: 0.15
+      26-35: 0.20
+      36-50: 0.30
+      51-65: 0.20
+      66+: 0.15
+    gender:
+      homme: 0.48
+      femme: 0.48
+      non-binaire: 0.04
+    location_type:
+      urban: 0.45
+      suburban: 0.35
+      rural: 0.20
+    education:
+      bac: 0.25
+      licence: 0.25
+      master: 0.20
+      doctorat: 0.05
+      autodidacte: 0.25
+    income_bracket:
+      low: 0.30
+      middle: 0.35
+      upper-middle: 0.25
+      high: 0.10
+
+simulation:
+  seed: 42
+  steps: 50
+  snapshot_interval: 5
+  opinion_model: "bounded_confidence"  # bounded_confidence | voter
+  network:
+    topology: "small_world"  # small_world | scale_free
+    k: 6          # average neighbors (small-world)
+    p: 0.1        # rewiring probability (small-world)
+  bounded_confidence:
+    epsilon: 0.3  # interaction threshold
+    mu: 0.1       # convergence speed
+  voter:
+    weight_confidence: true
+
+verbalization:
+  model: "claude-sonnet-4-0"
+  clusters: 4
+  samples_per_cluster: 2
+  max_tokens: 300
+
+api:
+  generation_model: "claude-haiku-4-5"
+  bulk_model: "claude-haiku-4-5"
+  max_cost_usd: 5.0
+  max_retries: 3
+  batch_size: 15

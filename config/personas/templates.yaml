@@ -1,0 +1,54 @@
+archetypes:
+  - name: "Jeune urbain tech"
+    age_range: [22, 30]
+    location_type: "urban"
+    education: ["master", "licence"]
+    income_bracket: ["middle", "upper-middle"]
+    traits_bias:
+      openness: "high"
+      tech_savviness: [0.7, 1.0]
+
+  - name: "Retraité rural"
+    age_range: [65, 85]
+    location_type: "rural"
+    education: ["bac", "autodidacte"]
+    income_bracket: ["low", "middle"]
+    traits_bias:
+      openness: "low"
+      tech_savviness: [0.0, 0.3]
+
+  - name: "Cadre supérieur"
+    age_range: [35, 55]
+    location_type: ["urban", "suburban"]
+    education: ["master", "doctorat"]
+    income_bracket: ["upper-middle", "high"]
+    traits_bias:
+      conscientiousness: "high"
+      risk_tolerance: [0.3, 0.7]
+
+  - name: "Étudiant engagé"
+    age_range: [18, 25]
+    location_type: "urban"
+    education: ["bac", "licence"]
+    income_bracket: "low"
+    traits_bias:
+      openness: "high"
+      political_leaning: [-0.8, -0.2]
+
+  - name: "Artisan indépendant"
+    age_range: [30, 55]
+    location_type: ["suburban", "rural"]
+    education: ["bac", "autodidacte"]
+    income_bracket: ["low", "middle"]
+    traits_bias:
+      conscientiousness: "high"
+      risk_tolerance: [0.4, 0.8]
+
+  - name: "Parent banlieue"
+    age_range: [30, 45]
+    location_type: "suburban"
+    education: ["bac", "licence", "master"]
+    income_bracket: "middle"
+    traits_bias:
+      agreeableness: "high"
+      risk_tolerance: [0.1, 0.4]
