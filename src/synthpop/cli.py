@@ -182,5 +182,17 @@ def run(
     asyncio.run(_run())
 
 
+@app.command()
+def serve(
+    host: str = typer.Option("0.0.0.0", help="Bind host"),
+    port: int = typer.Option(8000, help="Bind port"),
+) -> None:
+    """Start the REST API server for frontend integration."""
+    from synthpop.api.server import start_server
+
+    typer.echo(f"Starting SynthPop API server on {host}:{port}")
+    start_server(host=host, port=port)
+
+
 if __name__ == "__main__":
     app()
